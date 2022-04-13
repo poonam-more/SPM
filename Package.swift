@@ -20,7 +20,10 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SwiftPMDemo",
-            dependencies: []),
+            dependencies: [],
+            resources: [
+                .process("Resources/80.png")
+            ]),
         .testTarget(
             name: "SwiftPMDemoTests",
             dependencies: ["SwiftPMDemo"]),
